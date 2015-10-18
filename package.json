@@ -1,0 +1,15 @@
+{
+  "name": "git-step",
+  "version": "1.0.0",
+  "description": "",
+  "main": "next.js",
+  "bin": {
+    "git-next": "./next.js",
+    "git-prev": "./prev.js"
+  },
+  "scripts": {
+    "postinstall": "git config --global alias.next git-next; git config --global alias.prev git-prev;"
+  },
+  "author": "David Mark Clements",
+  "license": "MIT"
+}
