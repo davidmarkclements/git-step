@@ -1,7 +1,7 @@
 {
   "name": "git-step",
   "version": "1.0.0",
-  "description": "",
+  "description": "CLI tool to step through git commits in either direction",
   "main": "next.js",
   "bin": {
     "git-next": "./next.js",
@@ -11,5 +11,13 @@
     "postinstall": "git config --global alias.next git-next; git config --global alias.prev git-prev;"
   },
   "author": "David Mark Clements",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidmarkclements/git-step.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidmarkclements/git-step/issues"
+  },
+  "homepage": "https://github.com/davidmarkclements/git-step#readme"
 }
