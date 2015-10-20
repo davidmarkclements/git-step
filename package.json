@@ -1,6 +1,6 @@
 {
   "name": "git-step",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI tool to step through git commits in either direction",
   "main": "next.js",
   "bin": {
