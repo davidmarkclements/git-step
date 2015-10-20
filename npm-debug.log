@@ -8,23 +8,39 @@
 4 verbose node symlink /usr/local/bin/node
 5 info preversion undefined
 6 info git [ 'status', '--porcelain' ]
-7 verbose stack Error: Error: Git working directory not clean.
-7 verbose stack M  package.json
-7 verbose stack     at /Users/davidclements/npm-global/lib/node_modules/npm/lib/version.js:67:23
-7 verbose stack     at /Users/davidclements/npm-global/lib/node_modules/npm/lib/version.js:147:34
-7 verbose stack     at ChildProcess.exithandler (child_process.js:742:7)
-7 verbose stack     at ChildProcess.emit (events.js:110:17)
-7 verbose stack     at maybeClose (child_process.js:1015:16)
-7 verbose stack     at Socket.<anonymous> (child_process.js:1183:11)
-7 verbose stack     at Socket.emit (events.js:107:17)
-7 verbose stack     at Pipe.close (net.js:485:12)
-8 verbose cwd /Users/davidclements/z/nearForm/git-step
-9 error Darwin 14.0.0
-10 error argv "node" "/Users/davidclements/npm-global/bin/npm" "version" "patch"
-11 error node v0.12.7
-12 error npm  v2.11.1
-13 error Error: Git working directory not clean.
-13 error M  package.json
-14 error If you need help, you may report this error at:
-14 error     <https://github.com/npm/npm/issues>
-15 verbose exit [ 1, true ]
+7 verbose version.write data { name: 'git-step',
+7 verbose version.write   version: '1.0.2',
+7 verbose version.write   description: 'CLI tool to step through git commits in either direction',
+7 verbose version.write   main: 'next.js',
+7 verbose version.write   bin: { 'git-next': './next.js', 'git-prev': './prev.js' },
+7 verbose version.write   scripts: { postinstall: 'git config --global alias.next git-next && git config --global alias.prev git-prev' },
+7 verbose version.write   author: 'David Mark Clements',
+7 verbose version.write   license: 'MIT',
+7 verbose version.write   repository:
+7 verbose version.write    { type: 'git',
+7 verbose version.write      url: 'git+https://github.com/davidmarkclements/git-step.git' },
+7 verbose version.write   bugs: { url: 'https://github.com/davidmarkclements/git-step/issues' },
+7 verbose version.write   homepage: 'https://github.com/davidmarkclements/git-step#readme' } to package.json
+8 info git [ 'add', 'package.json' ]
+9 info git [ 'commit', '-m', '1.0.2' ]
+10 info git [ 'tag', 'v1.0.2', '-am', '1.0.2' ]
+11 verbose stack Error: Command failed: git tag v1.0.2 -am 1.0.2
+11 verbose stack fatal: tag 'v1.0.2' already exists
+11 verbose stack
+11 verbose stack     at ChildProcess.exithandler (child_process.js:751:12)
+11 verbose stack     at ChildProcess.emit (events.js:110:17)
+11 verbose stack     at maybeClose (child_process.js:1015:16)
+11 verbose stack     at Socket.<anonymous> (child_process.js:1183:11)
+11 verbose stack     at Socket.emit (events.js:107:17)
+11 verbose stack     at Pipe.close (net.js:485:12)
+12 verbose cwd /Users/davidclements/z/nearForm/git-step
+13 error Darwin 14.0.0
+14 error argv "node" "/Users/davidclements/npm-global/bin/npm" "version" "patch"
+15 error node v0.12.7
+16 error npm  v2.11.1
+17 error code 128
+18 error Command failed: git tag v1.0.2 -am 1.0.2
+18 error fatal: tag 'v1.0.2' already exists
+19 error If you need help, you may report this error at:
+19 error     <https://github.com/npm/npm/issues>
+20 verbose exit [ 1, true ]
